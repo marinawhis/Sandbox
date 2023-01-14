@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Glorious Sandbox</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- a grid framework in 250 bytes? are you kidding me?! -->
+    <link rel="stylesheet" href="css/grid.css">
+    <!-- general boring stuff and some visual tweaks -->
+    <link rel="stylesheet" href="css/screen.css?v=1.02">
+    <!-- sexy fonts whoooo -->
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <!-- p5js-->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <!-- p5js libraries-->
+    <!-- all the important responsive layout stuff -->
+	<style>
+		/* you only need width to set up columns; all columns are 100%-width by default, so we start
+		   from a one-column mobile layout and gradually improve it according to available screen space */
+
+		@media only screen and (min-width: 34em) {
+			.feature, .info { width: 50%; }
+		}
+
+		@media only screen and (min-width: 54em) {
+			.content { width: 66.66%; }
+			.sidebar { width: 33.33%; }
+			.info    { width: 100%;   }
+		}
+
+		@media only screen and (min-width: 76em) {
+			.content { width: 70%; }
+			.sidebar { width: 30%; }
+			.info    { width: 50%; }
+		}
+	</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row col">
+            <h1>Hello Friend! 👋</h1>
+        </div>
+        <div class="row">
+            <div class="col content">
+                <h2>this is the glorious sandbox</h2>
+                <p class="intro">What makes it so glorious? Nothing much. Actually nothing at all! But I like to have a place where I can test code, libraries and break pages. <br>However you found this page, I'm glad you're here! Also, sorry if you actually ended up finding it broken. 😅</p>
+                <h2>wall art</h2>
+                <p>Inspired by <a href="https://www.reddit.com/r/Place" target="_blank">r/Place</a> on Reddit and homepage guestbooks from the 2000s, I thought it would be cool to offer something while you're here. Feel free to leave a little doodle down below! Or even your next masterpiece. Maybe share with your friends and draw together? Totally up to you. <br>Use the canvas however you like, but please make sure not to share any private information about you or others, okay? </p>
+                <iframe referrerpolicy="no-referrer" allowfullscreen="false"  style="width: 100%; height: 700px;" src="https://wbo.ophir.dev/boards/glorioussandbox"></iframe>
+            </div>
+            <div class="col sidebar">
+                <h2>how is it made?</h2>
+                <p>This sandbox is based on the Dead Simple Grid by <a href="http://agafonkin.com/en" target="_blank">Vladimir Agafonkin</a>.</p>
+                <p>It includes <a href="https://p5js.org/" target="_blank">p5js library</a> which is a JavaScript library and developed by the community but created by <a href="https://lauren-mccarthy.com/" target="_blank">Lauren Lee McCarthy</a>. It's made for creative coding and making JS more accessible for non-programmers.</p>
+                <p>The whiteboard is made with <a href="https://wbo.ophir.dev/" target="_blank">WBO</a>. WBO is a free and open-source online collaborative whiteboard that allows many users to draw simultaneously on a large virtual board.</p>
+                <h2>some cool resources</h2>
+                <div class="feature">
+                    <h3>How to 3D</h3>
+                    <p>Blender Tutorials for Beginners by Andrew Price aka <a href="https://www.youtube.com/user/AndrewPPrice" target="_blank">Blender Guru</a> on YouTube.</p>
+                    <p>More Blender Tutorials by <a href="https://www.youtube.com/channel/UC9VayT7q3pQ7tdF-TG4Q0yQ" target="_blank">CG Cookie</a>.</p>
+                    <p>Speedart and Tutorials for Blender by <a href="https://www.youtube.com/channel/UCBigB2UktH5XE1hY1vqghOA" target="_blank">PigArt</a>.</p>
+                    <p>Some more Speedart and Tutorials for Blender by <a href="https://www.youtube.com/channel/UCR7Xn0VP8GPs0zG5NiivrIQ" target="_blank">brainchildpl</a>.</p>
+                    <p>Tutorials and Resources for Blender by <a href="https://www.youtube.com/channel/UCWWybvw9jnpOdJq_6wTHryA" target="_blank">CGBoost</a>.</p>
+                </div>
+                <div class="feature">
+                    <h3>more to come!</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row full-row">
+        	<div id="p5canvasContainer"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/p5script.js?v=0.1"></script>
+</body>
+
+</html>
