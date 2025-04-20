@@ -16,4 +16,4 @@ jobs:
       with:
         server: 45.87.81.64
         username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PW }}
+        password: ${{ secrets.FTP_PASSWORD }}
